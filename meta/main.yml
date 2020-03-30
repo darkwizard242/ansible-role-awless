@@ -1,0 +1,31 @@
+---
+galaxy_info:
+  role_name: awless
+  author: Ali Muhammad
+  description: Installs/Uninstalls 'awless' - a mighty CLI for AWS.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - awless
+    - system
+    - os
+    - aws
+    - cloud
+    - cli
