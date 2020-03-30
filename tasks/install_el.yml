@@ -1,0 +1,10 @@
+---
+# tasks file for awless
+
+- name: "Downloading and extracting {{ awless_app }} {{ awless_version }} on EL based systems."
+  unarchive:
+    src: "{{ awless_dl_url }}"
+    dest: "{{ awless_bin_path }}"
+    extra_opts:
+      - awless
+    remote_src: yes
