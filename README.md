@@ -2,7 +2,7 @@
 
 # Ansible Role: awless
 
-Role to install (_by default_) extended [awless](https://github.com/wallix/awless) on **Debian/Ubuntu** and **EL** systems.
+Role to install (_by default_) [awless](https://github.com/wallix/awless) on **Debian/Ubuntu** and **EL** systems.
 
 ## Requirements
 
