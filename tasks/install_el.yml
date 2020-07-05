@@ -1,7 +1,7 @@
 ---
-# tasks file for awless
+# tasks file for awless | EL Family
 
-- name: "Downloading and extracting {{ awless_app }} {{ awless_version }} on EL based systems."
+- name: EL Family | Downloading and extracting {{ awless_app }} {{ awless_version }}
   unarchive:
     src: "{{ awless_dl_url }}"
     dest: "{{ awless_bin_path }}"
