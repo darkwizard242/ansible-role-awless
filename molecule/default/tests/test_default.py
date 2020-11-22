@@ -5,14 +5,25 @@ import testinfra.utils.ansible_runner
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
+PACKAGE_BINARY = '/usr/local/bin/awless'
+
 
 def test_awless_binary_exists(host):
-    assert host.file('/usr/local/bin/awless').exists
+    """
+    Tests if awless binary exists.
+    """
+    assert host.file(PACKAGE_BINARY).exists
 
 
 def test_awless_binary_file(host):
-    assert host.file('/usr/local/bin/awless').is_file
+    """
+    Tests if awless binary is a file type.
+    """
+    assert host.file(PACKAGE_BINARY).is_file
 
 
 def test_awless_binary_which(host):
-    assert host.check_output('which awless') == '/usr/local/bin/awless'
+    """
+    Tests the output to confirm awless's binary location.
+    """
+    assert host.check_output('which awless') == PACKAGE_BINARY
