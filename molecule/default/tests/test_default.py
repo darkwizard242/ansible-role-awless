@@ -5,7 +5,7 @@ import testinfra.utils.ansible_runner
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
 
-PACKAGE_BINARY = '/usr/bin/awless'
+PACKAGE_BINARY = '/usr/local/bin/awless'
 
 
 def test_awless_binary_exists(host):
