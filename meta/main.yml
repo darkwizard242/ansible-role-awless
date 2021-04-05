@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: awless
-  author: Ali Muhammad
+  author: darkwizard242
   description: Installs/Uninstalls 'awless' - a mighty CLI for AWS.
   company: none
   license: MIT
