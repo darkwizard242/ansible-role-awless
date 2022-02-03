@@ -17,20 +17,28 @@ Available variables are listed below (located in `defaults/main.yml`):
 ```yaml
 awless_app: awless
 awless_version: 0.1.11
-awless_osarch: linux-amd64
-awless_dl_url: "https://github.com/wallix/{{ awless_app }}/releases/download/v{{ awless_version }}/{{ awless_app }}-{{ awless_osarch }}.tar.gz"
+awless_os: linux
+awless_arch: amd64
+awless_dl_url: "https://github.com/wallix/{{ awless_app }}/releases/download/v{{ awless_version }}/{{ awless_app }}-{{ awless_os }}-{{ awless_arch }}.tar.gz"
 awless_bin_path: /usr/local/bin
+awless_file_owner: root
+awless_file_group: root
+awless_file_permission_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable        | Value (default)                                                                                                                  | Description
---------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
-awless_app      | awless                                                                                                                           | Defines the app to install i.e. **awless**
-awless_version  | 0.1.11                                                                                                                           | Defined to dynamically fetch the desired version to install. Defaults to: **0.1.11**
-awless_osarch   | linux-amd64                                                                                                                      | Defines os architecture. Used for obtaining the correct type of binaries based on OS System Architecture. Defaults to: **linux-amd64**
-awless_dl_url   | <https://github.com/wallix/{{> awless_app }}/releases/download/v{{ awless_version }}/{{ awless_app }}-{{ awless_osarch }}.tar.gz | Defines URL to download the awless binary from.
-awless_bin_path | /usr/local/bin                                                                                                                   | Defined to dynamically set the appropriate path to store awless binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+Variable                    | Description
+--------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------
+awless_app                  | Defines the app to install i.e. **awless**
+awless_version              | Defined to dynamically fetch the desired version to install. Defaults to: **0.1.11**
+awless_os                   | Defines OS type. Used for obtaining the correct type of binaries based on OS. Defaults to: **linux**
+awless_arch                 | Defines Architecture type. Used for obtaining the correct type of binaries based on Architecture. Defaults to: **amd64**
+awless_dl_url               | Defines URL to download the awless binary from.
+awless_bin_path             | Defined to dynamically set the appropriate path to store awless binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin**
+awless_file_owner           | Owner for the binary file of awless.
+awless_file_group           | Group for the binary file of awless.
+awless_file_permission_mode | Defines the permission mode level for the file. Defaults to: `0755`
 
 ## Dependencies
 
@@ -72,4 +80,4 @@ For customizing behavior of role (i.e. placing binary of **awless** package in d
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).

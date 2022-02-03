@@ -3,6 +3,10 @@
 
 awless_app: awless
 awless_version: 0.1.11
-awless_osarch: linux-amd64
-awless_dl_url: "https://github.com/wallix/{{ awless_app }}/releases/download/v{{ awless_version }}/{{ awless_app }}-{{ awless_osarch }}.tar.gz"
+awless_os: linux
+awless_arch: amd64
+awless_dl_url: "https://github.com/wallix/{{ awless_app }}/releases/download/v{{ awless_version }}/{{ awless_app }}-{{ awless_os }}-{{ awless_arch }}.tar.gz"
 awless_bin_path: /usr/local/bin
+awless_file_owner: root
+awless_file_group: root
+awless_file_permission_mode: '0755'
