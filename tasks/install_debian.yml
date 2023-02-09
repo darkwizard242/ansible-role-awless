@@ -2,7 +2,7 @@
 # tasks file for awless - Debian/Ubuntu Family
 
 - name: Debian/Ubuntu Family | Downloading and extracting {{ awless_app }} {{ awless_version }}
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ awless_dl_url }}"
     dest: "{{ awless_bin_path }}"
     extra_opts:
